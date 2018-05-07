@@ -274,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/hw5/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/07/hw4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cocaice">
@@ -293,8 +293,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/07/hw5/" itemprop="url">
-                  系统分析与设计作业5
+                <a class="post-title-link" href="/2018/05/07/hw4/" itemprop="url">
+                  Untitled
                 </a>
               
             
@@ -320,7 +320,7 @@
                 
               
 
-              <time title="Created: 2018-05-07 00:30:29 / Modified: 02:04:31" itemprop="dateCreated datePublished" datetime="2018-05-07T00:30:29+08:00">2018-05-07</time>
+              <time title="Created: 2018-05-07 14:44:52 / Modified: 14:47:45" itemprop="dateCreated datePublished" datetime="2018-05-07T14:44:52+08:00">2018-05-07</time>
             
 
             
@@ -360,22 +360,39 @@
       
         
           
-            <h2 id="状态建模"><a href="#状态建模" class="headerlink" title="状态建模"></a>状态建模</h2><ol>
-<li><p>使用 UML State Model</p>
+            <h2 id="1-领域建模"><a href="#1-领域建模" class="headerlink" title="1.领域建模"></a>1.领域建模</h2><ul>
+<li><p>a.阅读Asg_RH文档，按用例构建领域模型。</p>
 <ul>
-<li>建模对象：参考 Asg_RH 文档， 对 Reservation/Order 对象建模。</li>
-<li>建模要求：参考练习不能提供足够信息帮助你对订单对象建模，请参考现在 定旅馆 的旅游网站，尽可能分析围绕订单发生的各种情况，直到订单通过销售事件（柜台销售）结束订单。</li>
+<li>按Task2要求，请使用工具UMLet，截图格式务必是png并控制尺寸</li>
+<li>说明：请不要受 PCMEF 层次结构影响。你需要识别实体（E）和 中介实体（M，也称状态实体）<ul>
+<li>在单页面应用（如 vue）中，E 一般与数据库构建有关， M 一般与 <a href="https://cn.vuejs.org/v2/guide/state-management.html" target="_blank" rel="noopener">store 模式</a> 有关</li>
+<li>在 java web 应用中，E 一般与数据库构建有关， M 一般与 session 有关</li>
 </ul>
-<p>状态图如下：</p>
-<p><img src="C:\Users\YZH\Desktop\Three\系统分析与设计\hw5\statemodel1.png" alt=""></p>
 </li>
-<li><p>研究淘宝退货流程活动图，对退货业务对象状态建模</p>
-<p>状态图如下：</p>
-<p><img src="C:\Users\YZH\Desktop\Three\系统分析与设计\hw5\statemodel2.png" alt=""></p>
-<p>​</p>
-<p>​</p>
+</ul>
+<p><img src="/2018/05/07/hw4/C:/Users\YZH\Desktop\Three\系统分析与设计\hw4\Domainmodel.png" alt=""></p>
 </li>
-</ol>
+<li><p>b.数据库建模（E-R模型）</p>
+<ul>
+<li>按 Task 3 要求，给出系统的 E-R 模型（数据逻辑模型）</li>
+<li>建模工具 PowerDesigner（简称PD） 或开源工具 <a href="http://www.codebydesign.com/" target="_blank" rel="noopener">OpenSystemArchitect</a></li>
+<li>不负责的链接 <a href="http://www.cnblogs.com/mcgrady/archive/2013/05/25/3098588.html" target="_blank" rel="noopener">http://www.cnblogs.com/mcgrady/archive/2013/05/25/3098588.html</a></li>
+<li>导出 Mysql 物理数据库的脚本</li>
+<li>简单叙说 数据库逻辑模型 与 领域模型 的异同</li>
+</ul>
+<p>用MySQL Workbench构建的系统的 E-R 模型（数据逻辑模型）如下：</p>
+<p><img src="/2018/05/07/hw4/" alt=""></p>
+<p>导出脚本：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- MySQL Script generated by MySQL Workbench  </span></span><br><span class="line"><span class="comment">-- Mon Apr  01:08:21 2018  </span></span><br><span class="line"><span class="comment">-- Model: New Model    Version: 1.0  </span></span><br><span class="line"><span class="comment">-- MySQL Workbench Forward Engineering  </span></span><br><span class="line">  </span><br><span class="line"><span class="keyword">SET</span> @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=<span class="number">0</span>;  </span><br><span class="line"><span class="keyword">SET</span> @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=<span class="number">0</span>;  </span><br><span class="line"><span class="keyword">SET</span> @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE=<span class="string">'TRADITIONAL,ALLOW_INVALID_DATES'</span>;  </span><br><span class="line">  </span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="comment">-- Schema mydb  </span></span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line">  </span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="comment">-- Schema mydb  </span></span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">SCHEMA</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span> <span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8 ;  </span><br><span class="line"><span class="keyword">USE</span> <span class="string">`mydb`</span> ;  </span><br><span class="line">  </span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="comment">-- Table `mydb`.`Hotel`  </span></span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Hotel`</span> (  </span><br><span class="line">  <span class="string">`idHotel`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`name`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`address`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`star level`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`idHotel`</span>),  </span><br><span class="line">  <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> <span class="string">`name_UNIQUE`</span> (<span class="string">`name`</span> <span class="keyword">ASC</span>))  </span><br><span class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span>;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="comment">-- Table `mydb`.`Customer`  </span></span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Customer`</span> (  </span><br><span class="line">  <span class="string">`identity number`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`name`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">GENERATED</span> <span class="keyword">ALWAYS</span> <span class="keyword">AS</span> () <span class="keyword">VIRTUAL</span>,  </span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`identity number`</span>),  </span><br><span class="line">  <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> <span class="string">`name_UNIQUE`</span> (<span class="string">`name`</span> <span class="keyword">ASC</span>))  </span><br><span class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span>;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="comment">-- Table `mydb`.`Reservation`  </span></span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Reservation`</span> (  </span><br><span class="line">  <span class="string">`idReservation`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`hotel name`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`room type`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`check in date`</span> <span class="built_in">DATE</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`check out date`</span> <span class="built_in">DATE</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`total price`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">GENERATED</span> <span class="keyword">ALWAYS</span> <span class="keyword">AS</span> () <span class="keyword">VIRTUAL</span>,  </span><br><span class="line">  <span class="string">`Customer_idCustomer`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`Hotel_idHotel`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`idReservation`</span>),  </span><br><span class="line">  <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> <span class="string">`hotel name_UNIQUE`</span> (<span class="string">`hotel name`</span> <span class="keyword">ASC</span>),  </span><br><span class="line">  <span class="keyword">INDEX</span> <span class="string">`_idx`</span> (<span class="string">`Customer_idCustomer`</span> <span class="keyword">ASC</span>),  </span><br><span class="line">  <span class="keyword">INDEX</span> <span class="string">`Hotel_idHotel_idx`</span> (<span class="string">`Hotel_idHotel`</span> <span class="keyword">ASC</span>),  </span><br><span class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`idCustomer`</span>  </span><br><span class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`Customer_idCustomer`</span>)  </span><br><span class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`Customer`</span> (<span class="string">`identity number`</span>)  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>,  </span><br><span class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`idHotel`</span>  </span><br><span class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`Hotel_idHotel`</span>)  </span><br><span class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`Hotel`</span> (<span class="string">`idHotel`</span>)  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>)  </span><br><span class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span>;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="comment">-- Table `mydb`.`Room`  </span></span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Room`</span> (  </span><br><span class="line">  <span class="string">`idRoom`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`type`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`price`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`Hotel_idHotel`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`idRoom`</span>),  </span><br><span class="line">  <span class="keyword">INDEX</span> <span class="string">`idHotel_idx`</span> (<span class="string">`Hotel_idHotel`</span> <span class="keyword">ASC</span>),  </span><br><span class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`idHotel`</span>  </span><br><span class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`Hotel_idHotel`</span>)  </span><br><span class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`Hotel`</span> (<span class="string">`idHotel`</span>)  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>)  </span><br><span class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span>;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="comment">-- Table `mydb`.`CreditCard`  </span></span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`CreditCard`</span> (  </span><br><span class="line">  <span class="string">`idCreditCard`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`type`</span> <span class="built_in">VARCHAR</span>(<span class="number">45</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`idCustomer`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`idCreditCard`</span>),  </span><br><span class="line">  <span class="keyword">INDEX</span> <span class="string">`idCustomer_idx`</span> (<span class="string">`idCustomer`</span> <span class="keyword">ASC</span>),  </span><br><span class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`idCustomer`</span>  </span><br><span class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`idCustomer`</span>)  </span><br><span class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`Customer`</span> (<span class="string">`name`</span>)  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>)  </span><br><span class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span>;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="comment">-- Table `mydb`.`Payment`  </span></span><br><span class="line"><span class="comment">-- -----------------------------------------------------  </span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`mydb`</span>.<span class="string">`Payment`</span> (  </span><br><span class="line">  <span class="string">`idPayment`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`total price`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`CreditCard_id`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  <span class="string">`Revervation_idReservation`</span> <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>,  </span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`idPayment`</span>),  </span><br><span class="line">  <span class="keyword">INDEX</span> <span class="string">`idReservation_idx`</span> (<span class="string">`Revervation_idReservation`</span> <span class="keyword">ASC</span>),  </span><br><span class="line">  <span class="keyword">INDEX</span> <span class="string">`idCreditCard_idx`</span> (<span class="string">`CreditCard_id`</span> <span class="keyword">ASC</span>),  </span><br><span class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`idReservation`</span>  </span><br><span class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`Revervation_idReservation`</span>)  </span><br><span class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`Reservation`</span> (<span class="string">`hotel name`</span>)  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>,  </span><br><span class="line">  <span class="keyword">CONSTRAINT</span> <span class="string">`idCreditCard`</span>  </span><br><span class="line">    FOREIGN <span class="keyword">KEY</span> (<span class="string">`CreditCard_id`</span>)  </span><br><span class="line">    <span class="keyword">REFERENCES</span> <span class="string">`mydb`</span>.<span class="string">`CreditCard`</span> (<span class="string">`idCreditCard`</span>)  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>  </span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">UPDATE</span> <span class="keyword">NO</span> <span class="keyword">ACTION</span>)  </span><br><span class="line"><span class="keyword">ENGINE</span> = <span class="keyword">InnoDB</span>;  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">SET</span> SQL_MODE=@OLD_SQL_MODE;  </span><br><span class="line"><span class="keyword">SET</span> FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;  </span><br><span class="line"><span class="keyword">SET</span> UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;</span><br></pre></td></tr></table></figure>
+<p>数据库逻辑模型和领域模型的异同：</p>
+<ul>
+<li>领域模型：领域模型是对领域内的概念类或现实世界中对象的可视化表示。又称概念模型、领域对象模型、分析对象模型。它专注于分析问题领域本身，发掘重要的业务领域概念，并建立业务领域概念之间的关系。</li>
+<li>数据库逻辑模型：对数据库结构的表示，是对概念模型的具体化，是系统设计与开发的一部分。</li>
+<li>相同点：领域建模和数据库建模都是通过类或实体、属性、关联构建的，表示形式很相似。</li>
+<li>不同点：领域模型是在了解用户需求后提出的一些概念性的东西，而数据库逻辑模型将其具体到数据存储类型。</li>
+</ul>
+</li>
+</ul>
 
           
         
@@ -573,6 +590,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/06/hw5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cocaice">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/blog-logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nick's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/06/hw5/" itemprop="url">
+                  系统分析与设计作业5
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-05-06 17:01:00" itemprop="dateCreated datePublished" datetime="2018-05-06T17:01:00+08:00">2018-05-06</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-05-07 14:49:44" itemprop="dateModified" datetime="2018-05-07T14:49:44+08:00">2018-05-07</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="状态建模"><a href="#状态建模" class="headerlink" title="状态建模"></a>状态建模</h2><ol>
+<li><p>使用 UML State Model</p>
+<ul>
+<li>建模对象：参考 Asg_RH 文档， 对 Reservation/Order 对象建模。</li>
+<li>建模要求：参考练习不能提供足够信息帮助你对订单对象建模，请参考现在 定旅馆 的旅游网站，尽可能分析围绕订单发生的各种情况，直到订单通过销售事件（柜台销售）结束订单。</li>
+</ul>
+<p>状态图如下：</p>
+<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw5/hw5-1.png" alt=""></p>
+</li>
+<li><p>研究淘宝退货流程活动图，对退货业务对象状态建模</p>
+<p>状态图如下：</p>
+<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw5/hw5-2.png" alt=""></p>
+<p>​</p>
+<p>​</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/21/hw3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -636,7 +820,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-05-07 14:13:42" itemprop="dateModified" datetime="2018-05-07T14:13:42+08:00">2018-05-07</time>
+                <time title="Modified: 2018-05-07 14:43:41" itemprop="dateModified" datetime="2018-05-07T14:43:41+08:00">2018-05-07</time>
               
             
           </span>
@@ -673,7 +857,7 @@
           
             <h2 id="1-用例建模"><a href="#1-用例建模" class="headerlink" title="1.用例建模"></a>1.用例建模</h2><ul>
 <li><p>a. 阅读 Asg_RH 文档，绘制用例图。 按 Task1 要求，请使用工具 UMLet，截图格式务必是 png 并控制尺寸</p>
-<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3(1" alt="">.png)</p>
+<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3-1.png" alt=""></p>
 </li>
 <li><p>b. 选择你熟悉的定旅馆在线服务系统（或移动 APP），如绘制用例图。并满足以下要求：</p>
 <ul>
@@ -681,7 +865,7 @@
 <li>尽可能识别外部系统，并用色彩标注新的外部系统和服务</li>
 </ul>
 <p>以下为用例图：</p>
-<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3(2" alt="">.png)</p>
+<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3-2.png" alt=""></p>
 </li>
 </ul>
 <ul>
@@ -690,20 +874,18 @@
 <p>因此我是这样认为，在项目早期，可以通过借鉴分析相似产品的用例图，我们能迅速发现找到产品的核心功能，然后在其基础上，我们去发掘不足之处以及不合理之处，对无用的功能进行删减，并且增添一些创新功能，这是一种不错的发现创新的思路与方法。</p>
 </li>
 <li><p>d. 请使用 SCRUM 方法，在（任务b）用例图基础上，编制某定旅馆开发的需求 （backlog）</p>
-<p>​</p>
 <p>| ID   | Name     | Imp  | Est  | How to demo                                              | Notes                                  |<br>| :— | :——- | :— | :— | :——————————————————- | :————————————- |<br>| 1    | 查找酒店 | 20   | 5    | 根据选择和输入的信息搜索旅馆                             | 可在商圈列表选择想入住的地段           |<br>| 2    | 预定酒店 | 40   | 20   | 在结果列表中选择酒店，可根据不同条件对酒店进行筛选和排序 | 可以通过高德地图在地图上浏览酒店位置   |<br>| 3    | 提交订单 | 15   | 10   | 显示详细订单信息，可对订单进行修改，最终确认订单         | 需对修改后的订单进行二次确认           |<br>| 4    | 支付订单 | 15   | 5    | 通过与支付系统对接完成支付订单的操作                     | 需与支付宝、银联等不同支付系统进行对接 |</p>
-<p>​</p>
 </li>
 </ul>
 <h2 id="2-业务建模"><a href="#2-业务建模" class="headerlink" title="2.业务建模"></a>2.业务建模</h2><ul>
 <li><p>a. 在（任务b）基础上，用活动图建模找酒店用例。简述利用流程图发现子用例的方法。</p>
-<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3(3" alt="流程图1">.png)</p>
+<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3-3.png" alt="流程图1"></p>
 </li>
 <li><p>b. 选择你身边的银行 ATM，用活动图描绘取款业务流程</p>
-<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3(4" alt="">.png)</p>
+<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3-4.png" alt=""></p>
 </li>
 <li><p>c. 查找淘宝退货业务官方文档，使用多泳道图，表达客户、淘宝网、淘宝商家服务系统、商家等用户和系统协同完成退货业务的过程。分析客户要完成退货业务，在淘宝网上需要实现哪些系统用例</p>
-<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3(5" alt="">.png)</p>
+<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw3/hw3-5.png" alt=""></p>
 <p> 淘宝网需要实现的系统用例有：生成退款单、同意退款处理、拒绝退款处理以及变更退款状态。</p>
 </li>
 </ul>
@@ -844,7 +1026,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-05-07 14:12:47" itemprop="dateModified" datetime="2018-05-07T14:12:47+08:00">2018-05-07</time>
+                <time title="Modified: 2018-05-07 14:47:57" itemprop="dateModified" datetime="2018-05-07T14:47:57+08:00">2018-05-07</time>
               
             
           </span>
@@ -956,7 +1138,7 @@
 </ul>
 <h1 id="2-项目管理使用"><a href="#2-项目管理使用" class="headerlink" title="2.项目管理使用"></a>2.项目管理使用</h1><ul>
 <li><p><strong>使用截图工具（png格式输出），展现你团队的任务 Kanban，请注意以下要求</strong> </p>
-<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw2(1" alt="">.png)</p>
+<p><img src="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw2/hw2-1.png" alt=""></p>
 </li>
 </ul>
 
@@ -1265,7 +1447,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
