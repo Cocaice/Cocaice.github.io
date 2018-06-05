@@ -111,7 +111,7 @@
 <meta property="og:description" content="描述软件架构与框架之间的区别与联系 软件架构：软件架构是一个系统的草图，它和语言和技术无关，是一种关于软件如何设计的策略。软件架构描述的对象是直接构成系统的抽象组件。各个组件之间的连接则明确和相对细致地描述组件之间的通讯。     软件框架：软件框架是面向领域（如 ERP、计算领域等）的、可复用的“半 成品”软件，它实现了该领域的共性部分，并提供了一些定义良好的 可变点以保证灵活性和可扩展性。也就">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Cocaice/Cocaice.github.io/master/images/hw7/layer.png">
-<meta property="og:updated_time" content="2018-06-03T14:23:23.413Z">
+<meta property="og:updated_time" content="2018-06-05T07:21:38.341Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="系统分析与设计作业7">
 <meta name="twitter:description" content="描述软件架构与框架之间的区别与联系 软件架构：软件架构是一个系统的草图，它和语言和技术无关，是一种关于软件如何设计的策略。软件架构描述的对象是直接构成系统的抽象组件。各个组件之间的连接则明确和相对细致地描述组件之间的通讯。     软件框架：软件框架是面向领域（如 ERP、计算领域等）的、可复用的“半 成品”软件，它实现了该领域的共性部分，并提供了一些定义良好的 可变点以保证灵活性和可扩展性。也就">
@@ -322,12 +322,24 @@
                 
               
 
-              <time title="Created: 2018-06-03 17:01:00 / Modified: 22:23:23" itemprop="dateCreated datePublished" datetime="2018-06-03T17:01:00+08:00">2018-06-03</time>
+              <time title="Created: 2018-06-03 17:01:00" itemprop="dateCreated datePublished" datetime="2018-06-03T17:01:00+08:00">2018-06-03</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-05 15:21:38" itemprop="dateModified" datetime="2018-06-05T15:21:38+08:00">2018-06-05</time>
               
             
           </span>
@@ -401,7 +413,7 @@
 <li>mutations：存放更改state里状态的方法，用于变更状态，是唯一一个更改状态的属性</li>
 <li>getters：将state中某个状态进行过滤，然后获取新的状态，类似于vue中的computed</li>
 <li>actions：用于调用事件动作，并传递给mutation</li>
-<li>modules：主要用来拆分state vuex的数据流顺序为： View调用store.commit提交对应的请求到Store中对应的mutation函数 -&gt; store改变(vue检测到数据变化自动渲染)</li>
+<li>modules：主要用来拆分state</li>
 </ul>
 <p>Vuex数据流顺序是：</p>
 <p>View调用store.commit提交对应的请求到Store中对应的mutation函数-&gt;store改变(vue检测到数据变化自动渲染) </p>
